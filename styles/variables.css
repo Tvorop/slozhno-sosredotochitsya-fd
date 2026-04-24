@@ -1,5 +1,5 @@
 :root {
-  --font-family: 'IBM Plex mono';
+  --main-font: 'IBM Plex mono';
   --bg-image: url(/images/cover-image-dark.png);
   --bg-color: rgb(0 0 40);
   --accent-color: rgba(255 0 112);
