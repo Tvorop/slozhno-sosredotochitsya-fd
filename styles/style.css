@@ -17,13 +17,14 @@
   grid-template-rows: 1fr auto 1fr;
   block-size: 100vh;
   min-block-size: 668px;
-  padding-inline: 10px;
+  padding-inline: var(--offset-xs);
 }
 
 .header__title {
   color: var(--bold-title-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
-  font-size: (7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: var(--bold-font);
+  text-shadow: 1.5px 1.5px 0 var(--accent-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
 
 .header__description {
@@ -96,14 +97,12 @@
 .title-decor {
   color: var(--accent-font-color);
   background-color: var(--accent-color);
-  font-family: var(--font-family), sans-serif;
   font-weight: var(--bold-font);
 }
 
 .title-decor__unimportant {
   color: var(--accent-font-color);
   background-color: var(--accent-color);
-  font-family: var(--font-family), sans-serif;
   font-weight: var(--regular-font);
 }
 
@@ -137,6 +136,10 @@
   gap: var(--offset-s);
 }
 
+.section__title {
+  color: var(--accent-color);
+}
+
 .section__content {
   display: grid;
   gap: var(--offset-s);
@@ -145,10 +148,6 @@
 .section__content-article {
   display: grid;
   gap: var(--offset-xs);
-}
-
-.section__title {
-  color: var(--accent-color);
 }
 
 .section__content-article-text {
@@ -172,11 +171,77 @@
   outline: 1px solid var(--main-font-color);
 }
 
+.section-gallery__container {
+  display: grid;
+  gap: var(--offset-xs);
+}
+
 .footer {
+  position: relative;
+  display: grid;
+  align-items: center;
+  padding-inline: var(--offset-xs);
   block-size: 100vh;
   min-block-size: 668px;
 }
 
 .footer__title {
   color: var(--bold-title-color);
+  font-weight: var(--bold-font);
+  text-align: center;
+  text-shadow: .5px .5px 0 var(--accent-color);
+}
+
+@media (width <= 768px) {
+  .page {
+    gap: var(--offset-l);
+  }
+
+  .header {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr fit-content 1fr;
+    min-block-size: 1024px;
+  }
+
+  .decorated-zone {
+    min-block-size: 1024px;
+  }
+
+  .decorated-zone::before {
+    inset-block-start: 10px;
+    inset-inline-end: 10px;
+  }
+
+  .decorated-zone::after {
+    
+  }
+
+  .header__theme-menu {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .header__title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 2;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__description {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+
+
+  .main {
+    gap: var(--offset-xl)
+  }
+
+
+}
+
+@media (width <= 1024px) {
+
 }
