@@ -1,13 +1,15 @@
 :root {
   --main-font: 'IBM Plex mono';
-  --bg-image: url(/images/cover-image-dark.png);
+  --bg-image: url(../images/cover-image-dark.png);
   --bg-color: rgb(0 0 40);
-  --button-color: rgba(255 0 112);
-  --accent-color: rgba(255 0 112);
+  --button-color: rgb(255 0 112);
+  --accent-color: rgb(255 0 112);
+  --transparent-accent-color: rgb(255 0 112 / .4);
   --main-font-color: rgb(241 178 206);
   --accent-font-color: rgb(0 0 40);
   --section-title-color: rgba(255 0 112);
   --bold-title-color: rgb(219 0 255);
+  --rec: block;
   --bold-font: 700;
   --regular-font: 400;
   --offset-xs: 10px;
