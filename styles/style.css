@@ -241,6 +241,10 @@
     gap: var(--offset-xl);
   }
 
+  .section {
+    gap: var(--offset-s);
+  }
+
   .section-why {
     grid-template-columns: 1fr 2fr;
   }
