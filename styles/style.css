@@ -1,12 +1,12 @@
 .page {
   display: grid;
-  font-family: var(--main-font), sans-serif;
-  font-size: 18px;
   background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  font-family: var(--main-font), sans-serif;
+  font-size: 18px;
   padding-inline: var(--offset-xs);
 }
 
@@ -26,19 +26,17 @@
 
 .title-decor {
   color: var(--accent-font-color);
+  background-color: var(--accent-color);
   font-weight: var(--bold-font);
   block-size: min-content;
-  background-color: var(--accent-color);
   inline-size: 100%;
-  justify-self: end;
-  align-self: center;
 }
 
 .title-decor__unimportant {
   color: var(--accent-font-color);
+  background-color: var(--accent-color);
   font-weight: var(--regular-font);
   block-size: min-content;
-  background-color: var(--accent-color);
 }
 
 .decorated-zone {
@@ -103,8 +101,8 @@
   user-select: none;
   cursor: pointer;
   color: var(--accent-color);
-  text-transform: lowercase;
   background-color: transparent;
+  text-transform: lowercase;
 }
 
 .header__theme-menu-button:hover {
