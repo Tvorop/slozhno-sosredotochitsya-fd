@@ -8,13 +8,13 @@
   font-family: var(--main-font), sans-serif;
   font-size: 18px;
   gap: var(--offset-m);
-  padding-inline: var(--offset-xs);
 }
 
 .header {
   display: grid;
   grid-template-rows: 1fr auto 1fr;
   block-size: 100vh;
+  padding-inline: var(--offset-xs);
 }
 
 .header__title {
@@ -48,23 +48,25 @@
 .decorated-zone {
   position: relative;
   block-size: 100vh;
+  padding-inline: var(--offset-xs);
 }
 
 .decorated-zone::before {
   content: '';
   position: absolute;
   inset-block-start: var(--offset-xs);
+  inset-inline-end: var(--offset-xs);
   border-inline-end: 1px solid var(--button-color);
   border-block-start: 1px solid var(--button-color);
   inline-size: 25px;
   block-size: 25px;
-  justify-self: end;
 }
 
 .decorated-zone::after {
   content: '';
   position: absolute;
   inset-block-end: var(--offset-xs);
+  inset-inline-start: var(--offset-xs);
   border-inline-start: 1px solid var(--button-color);
   border-block-end: 1px solid var(--button-color);
   inline-size: 25px;
@@ -73,7 +75,7 @@
 
 .header__rec-marker {
   position: absolute;
-  inset-inline-end: 30px;
+  inset-inline-end: 40px;
   inset-block-start: 11px;
   color: var(--accent-color);
   justify-self: end;
@@ -132,6 +134,7 @@
 .main {
   display: grid;
   gap: 50px;
+  padding-inline: var(--offset-xs);
 }
 
 .section {
@@ -203,18 +206,20 @@
 @media (width >= 768px) {
   .page {
     gap: var(--offset-l);
-    padding-inline: var(--offset-s);
   }
 
   .header {
     grid-template-columns: repeat(2, 1fr);
+    padding-inline: var(--offset-s);
   }
 
   .decorated-zone::before {
+    inset-inline-end: var(--offset-s);
     inset-block-start: var(--offset-s);
   }
 
   .decorated-zone::after {
+    inset-inline-start: var(--offset-s);
     inset-block-end: var(--offset-s);
   }
 
@@ -230,6 +235,7 @@
   }
 
   .header__rec-marker {
+    inset-inline-end: 50px;
     inset-block-start: var(--offset-s);
   }
 
@@ -239,6 +245,7 @@
 
   .main {
     gap: var(--offset-xl);
+    padding-inline: var(--offset-s);
   }
 
   .section {
@@ -286,6 +293,10 @@
   .section-gallery__container-item__street {
     grid-column: 2 / 4;
     grid-row: 3;
+  }
+
+  .footer {
+    padding-inline: var(--offset-s);
   }
 
   .footer__title {
