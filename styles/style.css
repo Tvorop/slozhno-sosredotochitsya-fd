@@ -213,7 +213,6 @@
 
   .header {
     grid-template-columns: repeat(2, 1fr);
-    padding-inline: var(--offset-s);
     padding-inline: 5px;
   }
 
