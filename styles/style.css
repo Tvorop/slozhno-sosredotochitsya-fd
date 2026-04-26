@@ -214,6 +214,7 @@
   .header {
     grid-template-columns: repeat(2, 1fr);
     padding-inline: var(--offset-s);
+    padding-inline: 5px;
   }
 
   .decorated-zone::before {
@@ -235,6 +236,7 @@
   .header__description {
     grid-column: 2;
     grid-row: 3;
+    padding-inline-end: 20px;
   }
 
   .header__rec-marker {
@@ -244,6 +246,8 @@
 
   .header__theme-menu {
     grid-column: 2;
+    padding-block-start: var(--offset-s);
+    padding-inline-end: 15px;
   }
 
   .main {
@@ -312,7 +316,8 @@
     grid-column: 3 span;
     justify-self: center;
     align-self: flex-start;
-    padding-block-start: var(--offset-s);
+    padding-inline-start: 10px;
+    padding-block-start: 17px;
   }
 
   .header__theme-menu-list {
